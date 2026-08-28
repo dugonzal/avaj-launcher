@@ -19,6 +19,6 @@ public enum AircraftType {
       if (t.label.equals(raw) || t.name().equalsIgnoreCase(raw))
         return t;
 
-    throw new SimulationException("ERROR: tipo de aeronave desconocido: " + raw);
+    throw new SimulationException("ERROR: unknown aircraft type: " + raw);
   }
 }

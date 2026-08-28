@@ -1,7 +1,8 @@
 package school42.urduliz.dugonzal.avaj.domain.model.aircraft;
 
+import school42.urduliz.dugonzal.avaj.domain.enums.AircraftType;
 import school42.urduliz.dugonzal.avaj.domain.enums.Weather;
-import school42.urduliz.dugonzal.avaj.domain.model.value.Coordinates;
+import school42.urduliz.dugonzal.avaj.domain.model.records.value.Coordinates;
 
 public class Baloon extends Aircraft {
 
@@ -11,19 +12,19 @@ public class Baloon extends Aircraft {
 
   @Override
   public String getTypeName() {
-    return "Balloon";
+    return AircraftType.BALOON.getLabel();
   }
 
   @Override
   protected WeatherUpdate weatherUpdate(Weather weather) {
-    int lon = coordinates.longitude();
-    int lat = coordinates.latitude();
-    int h = coordinates.height();
+    int longitude = coordinates.longitude();
+    int latitude = coordinates.latitude();
+    int height = coordinates.height();
     return switch (weather) {
-      case SUN  -> new WeatherUpdate(lon + 2, lat, h + 4,  "Let's enjoy the good weather and take some pics.");
-      case RAIN -> new WeatherUpdate(lon,     lat, h - 5,  "Damn you rain! You messed up my balloon.");
-      case FOG  -> new WeatherUpdate(lon,     lat, h - 3,  "I can't see anything.");
-      case SNOW -> new WeatherUpdate(lon,     lat, h - 15, "It's snowing. We're gonna crash.");
+      case SUN  -> new WeatherUpdate(longitude + 2, latitude, height + 4,  "Let's enjoy the good weather and take some pics.");
+      case RAIN -> new WeatherUpdate(longitude,     latitude, height - 5,  "Damn you rain! You messed up my balloon.");
+      case FOG  -> new WeatherUpdate(longitude,     latitude, height - 3,  "I can't see anything.");
+      case SNOW -> new WeatherUpdate(longitude,     latitude, height - 15, "It's snowing. We're gonna crash.");
     };
   }
 }

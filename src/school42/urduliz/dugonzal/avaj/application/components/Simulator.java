@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import school42.urduliz.dugonzal.avaj.application.services.SimulationService;
 import school42.urduliz.dugonzal.avaj.domain.model.exception.SimulationException;
-import school42.urduliz.dugonzal.avaj.infrastructure.Scenario;
+import school42.urduliz.dugonzal.avaj.domain.model.records.Scenario;
 import school42.urduliz.dugonzal.avaj.infrastructure.ScenarioParser;
 
 public class Simulator {
@@ -18,7 +18,7 @@ public class Simulator {
       System.out.println(e.getMessage());
       System.exit(1);
     } catch (IOException e) {
-      System.out.println("ERROR: no se pudo escribir simulation.txt: " + e.getMessage());
+      System.out.println("ERROR: could not write simulation.txt: " + e.getMessage());
       System.exit(1);
     }
   }

@@ -1,8 +1,8 @@
 package school42.urduliz.dugonzal.avaj.domain.model.aircraft;
 
 import school42.urduliz.dugonzal.avaj.domain.enums.Weather;
+import school42.urduliz.dugonzal.avaj.domain.model.records.value.Coordinates;
 import school42.urduliz.dugonzal.avaj.domain.model.weather.WeatherTower;
-import school42.urduliz.dugonzal.avaj.domain.model.value.Coordinates;
 
 public abstract class Aircraft implements Flyable {
 
@@ -58,7 +58,7 @@ public abstract class Aircraft implements Flyable {
 
     coordinates = new Coordinates(longitude, latitude, height);
     writeMessage(message);
-    if (height == 0) {
+    if (height < 1) {
       writeLanding();
       weatherTower.unregister(this);
     }

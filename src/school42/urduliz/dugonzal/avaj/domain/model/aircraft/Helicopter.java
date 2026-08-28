@@ -1,7 +1,7 @@
 package school42.urduliz.dugonzal.avaj.domain.model.aircraft;
 
 import school42.urduliz.dugonzal.avaj.domain.enums.Weather;
-import school42.urduliz.dugonzal.avaj.domain.model.value.Coordinates;
+import school42.urduliz.dugonzal.avaj.domain.model.records.value.Coordinates;
 
 public class Helicopter extends Aircraft {
 
@@ -11,14 +11,14 @@ public class Helicopter extends Aircraft {
 
   @Override
   protected WeatherUpdate weatherUpdate(Weather weather) {
-    int lon = coordinates.longitude();
-    int lat = coordinates.latitude();
-    int h = coordinates.height();
+    int longitude = coordinates.longitude();
+    int latitude = coordinates.latitude();
+    int height = coordinates.height();
     return switch (weather) {
-      case SUN  -> new WeatherUpdate(lon + 10, lat, h + 2, "This is hot.");
-      case RAIN -> new WeatherUpdate(lon + 5,  lat, h,     "Damn you rain! You messed up my helicopter.");
-      case FOG  -> new WeatherUpdate(lon + 1,  lat, h,     "I can't see anything.");
-      case SNOW -> new WeatherUpdate(lon,      lat, h - 12, "My rotor is going to freeze!");
+      case SUN  -> new WeatherUpdate(longitude + 10, latitude, height + 2, "This is hot.");
+      case RAIN -> new WeatherUpdate(longitude + 5,  latitude, height,     "Damn you rain! You messed up my helicopter.");
+      case FOG  -> new WeatherUpdate(longitude + 1,  latitude, height,     "I can't see anything.");
+      case SNOW -> new WeatherUpdate(longitude,      latitude, height - 12, "My rotor is going to freeze!");
     };
   }
 }
