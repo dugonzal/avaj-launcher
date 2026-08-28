@@ -1,2 +1,5 @@
-out
-@sources.txt
+# Artefactos de build — el subject (AVAJ-GEN-04) prohibe versionar .class
+out/
+sources.txt
+simulation.txt
+*.class

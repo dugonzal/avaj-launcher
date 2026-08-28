@@ -1,12 +1,14 @@
-all:
+all: build
+	java -cp out school42.urduliz.dugonzal.avaj.application.components.Simulator $(SCENARIO)
+build:
 	find src -name "*.java" > sources.txt
 	javac -d out @sources.txt
-	java -cp out school42.urduliz.dugonzal.avaj.Main
 
 clean:
 	rm -rf out
+	rm -rf simulation.txt
 
-fclean: clean 
+fclean: clean
 	rm -rf sources.txt
 
-re: fclean all 
+re: fclean all
