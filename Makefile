@@ -1,9 +1,11 @@
 all:
 	find src -name "*.java" > sources.txt
-	javac @sources.txt
-	java -cp src school42.urduliz.dugonzal.avaj.Main
+	javac -d out @sources.txt
+	java -cp out school42.urduliz.dugonzal.avaj.Main
+
 clean:
 	rm -rf out
+
 fclean: clean 
 	rm -rf sources.txt
 
