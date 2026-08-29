@@ -6,7 +6,7 @@ import school42.urduliz.dugonzal.avaj.domain.model.aircraft.Flyable;
 import school42.urduliz.dugonzal.avaj.domain.model.aircraft.Helicopter;
 import school42.urduliz.dugonzal.avaj.domain.model.aircraft.JetPlane;
 import school42.urduliz.dugonzal.avaj.domain.model.exception.SimulationException;
-import school42.urduliz.dugonzal.avaj.domain.model.records.value.Coordinates;
+import school42.urduliz.dugonzal.avaj.domain.model.records.Coordinates;
 
 public class AircraftFactory {
 

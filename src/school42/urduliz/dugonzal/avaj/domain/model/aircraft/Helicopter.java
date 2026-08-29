@@ -1,7 +1,7 @@
 package school42.urduliz.dugonzal.avaj.domain.model.aircraft;
 
 import school42.urduliz.dugonzal.avaj.domain.enums.Weather;
-import school42.urduliz.dugonzal.avaj.domain.model.records.value.Coordinates;
+import school42.urduliz.dugonzal.avaj.domain.model.records.Coordinates;
 
 public class Helicopter extends Aircraft {
 

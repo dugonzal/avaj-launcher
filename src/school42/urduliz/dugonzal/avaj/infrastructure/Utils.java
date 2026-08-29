@@ -47,6 +47,6 @@ public final class Utils {
     }
     if (v < 0)
       throw new SimulationException("ERROR: invalid coordinate (cannot be negative): \"" + s + "\"");
-    return v;
+    else return v;
   }
 }

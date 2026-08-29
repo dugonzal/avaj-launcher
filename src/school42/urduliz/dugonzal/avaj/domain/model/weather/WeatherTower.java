@@ -1,6 +1,6 @@
 package school42.urduliz.dugonzal.avaj.domain.model.weather;
 
-import school42.urduliz.dugonzal.avaj.domain.model.records.value.Coordinates;
+import school42.urduliz.dugonzal.avaj.domain.model.records.Coordinates;
 
 public class WeatherTower extends Tower {
 
