@@ -45,8 +45,6 @@ public final class Utils {
     } catch (NumberFormatException e) {
       throw new SimulationException("ERROR: invalid coordinate: \"" + s + "\"");
     }
-    if (v < 0)
-      throw new SimulationException("ERROR: invalid coordinate (cannot be negative): \"" + s + "\"");
-    else return v;
+    return v;
   }
 }
