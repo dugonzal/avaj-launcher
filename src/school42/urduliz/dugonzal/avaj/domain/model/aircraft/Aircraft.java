@@ -2,7 +2,9 @@ package school42.urduliz.dugonzal.avaj.domain.model.aircraft;
 
 import school42.urduliz.dugonzal.avaj.domain.enums.Weather;
 import school42.urduliz.dugonzal.avaj.domain.model.records.Coordinates;
+import school42.urduliz.dugonzal.avaj.domain.model.records.WeatherUpdate;
 import school42.urduliz.dugonzal.avaj.domain.model.weather.WeatherTower;
+import school42.urduliz.dugonzal.avaj.infrastructure.contracts.Flyable;
 
 public abstract class Aircraft implements Flyable {
 
@@ -36,7 +38,7 @@ public abstract class Aircraft implements Flyable {
   public final void updateConditions() {
     Weather weather = Weather.valueOf(weatherTower.getWeather(coordinates));
     WeatherUpdate update = weatherUpdate(weather);
-    finishUpdate(update.longitude, update.latitude, update.height, update.message);
+    finishUpdate(update.longitude(), update.latitude(), update.height(), update.message());
   }
 
   // Cada subtipo declara solo su tabla de movimiento + mensaje.
@@ -58,12 +60,9 @@ public abstract class Aircraft implements Flyable {
 
     coordinates = new Coordinates(longitude, latitude, height);
     writeMessage(message);
-    if (height < 1) {
+    if (height == 0) {
       writeLanding();
       weatherTower.unregister(this);
     }
-  }
-
-  protected record WeatherUpdate(int longitude, int latitude, int height, String message) {
   }
 }

@@ -3,6 +3,7 @@ package school42.urduliz.dugonzal.avaj.domain.model.aircraft;
 import school42.urduliz.dugonzal.avaj.domain.enums.AircraftType;
 import school42.urduliz.dugonzal.avaj.domain.enums.Weather;
 import school42.urduliz.dugonzal.avaj.domain.model.records.Coordinates;
+import school42.urduliz.dugonzal.avaj.domain.model.records.WeatherUpdate;
 
 public class Baloon extends Aircraft {
 

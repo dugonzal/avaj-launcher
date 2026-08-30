@@ -2,11 +2,11 @@ package school42.urduliz.dugonzal.avaj.domain.model.factory;
 
 import school42.urduliz.dugonzal.avaj.domain.enums.AircraftType;
 import school42.urduliz.dugonzal.avaj.domain.model.aircraft.Baloon;
-import school42.urduliz.dugonzal.avaj.domain.model.aircraft.Flyable;
 import school42.urduliz.dugonzal.avaj.domain.model.aircraft.Helicopter;
 import school42.urduliz.dugonzal.avaj.domain.model.aircraft.JetPlane;
 import school42.urduliz.dugonzal.avaj.domain.model.exception.SimulationException;
 import school42.urduliz.dugonzal.avaj.domain.model.records.Coordinates;
+import school42.urduliz.dugonzal.avaj.infrastructure.contracts.Flyable;
 
 public class AircraftFactory {
 

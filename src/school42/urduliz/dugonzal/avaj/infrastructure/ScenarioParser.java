@@ -6,6 +6,7 @@ import java.util.List;
 import school42.urduliz.dugonzal.avaj.domain.enums.AircraftType;
 import school42.urduliz.dugonzal.avaj.domain.model.exception.SimulationException;
 import school42.urduliz.dugonzal.avaj.domain.model.records.Scenario;
+import school42.urduliz.dugonzal.avaj.domain.model.records.AircraftSpect;
 import school42.urduliz.dugonzal.avaj.domain.model.records.Coordinates;
 
 public class ScenarioParser {

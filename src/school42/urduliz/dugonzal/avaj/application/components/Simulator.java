@@ -9,7 +9,7 @@ import school42.urduliz.dugonzal.avaj.domain.model.records.Scenario;
 import school42.urduliz.dugonzal.avaj.infrastructure.ScenarioParser;
 
 public class Simulator {
-
+  private static final String FILE_OUTPUT = "simulation.txt";
   public static void main(String[] args) {
     try {
       Scenario scenario = new ScenarioParser(args).parse();
@@ -25,7 +25,7 @@ public class Simulator {
 
   private static void run(Scenario scenario) throws SimulationException, IOException {
     PrintStream original = System.out;
-    try (PrintStream fileOut = new PrintStream(new FileOutputStream("simulation.txt"))) {
+    try (PrintStream fileOut = new PrintStream(new FileOutputStream(FILE_OUTPUT))) {
       System.setOut(fileOut);
       SimulationService.run(scenario);
       System.out.flush();

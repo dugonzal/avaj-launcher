@@ -1,11 +1,11 @@
 package school42.urduliz.dugonzal.avaj.application.services;
 
-import school42.urduliz.dugonzal.avaj.domain.model.aircraft.Flyable;
 import school42.urduliz.dugonzal.avaj.domain.model.exception.SimulationException;
 import school42.urduliz.dugonzal.avaj.domain.model.factory.AircraftFactory;
+import school42.urduliz.dugonzal.avaj.domain.model.records.AircraftSpect;
 import school42.urduliz.dugonzal.avaj.domain.model.records.Scenario;
 import school42.urduliz.dugonzal.avaj.domain.model.weather.WeatherTower;
-import school42.urduliz.dugonzal.avaj.infrastructure.AircraftSpect;
+import school42.urduliz.dugonzal.avaj.infrastructure.contracts.Flyable;
 
 public class SimulationService {
 

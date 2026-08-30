@@ -1,6 +1,6 @@
-package school42.urduliz.dugonzal.avaj.infrastructure;
+package school42.urduliz.dugonzal.avaj.domain.model.records;
 
 import school42.urduliz.dugonzal.avaj.domain.enums.AircraftType;
-import school42.urduliz.dugonzal.avaj.domain.model.records.Coordinates;
+
 public record AircraftSpect(AircraftType type, String name, Coordinates coordinates) {
 }

@@ -12,10 +12,9 @@ public final class Utils {
 
   public static Path validateFile(String filePath) throws SimulationException {
     Path path = Path.of(filePath);
-    if (!path.toFile().isFile()) {
+    if (!path.toFile().isFile())
       throw new SimulationException("ERROR: file not found: " + filePath);
-    }
-    return path;
+    else return path;
   }
 
   public static List<String> readLines(Path path) throws SimulationException {
@@ -39,12 +38,10 @@ public final class Utils {
   }
 
   public static int parseCoordinate(String s) throws SimulationException {
-    int v;
     try {
-      v = Integer.parseInt(s.trim());
+      return Integer.parseInt(s.trim());
     } catch (NumberFormatException e) {
       throw new SimulationException("ERROR: invalid coordinate: \"" + s + "\"");
     }
-    return v;
   }
 }

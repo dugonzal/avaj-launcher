@@ -3,7 +3,7 @@ package school42.urduliz.dugonzal.avaj.domain.model.weather;
 import java.util.ArrayList;
 import java.util.List;
 import school42.urduliz.dugonzal.avaj.domain.model.aircraft.Aircraft;
-import school42.urduliz.dugonzal.avaj.domain.model.aircraft.Flyable;
+import school42.urduliz.dugonzal.avaj.infrastructure.contracts.Flyable;
 
 public class Tower {
 

@@ -1,4 +1,4 @@
-package school42.urduliz.dugonzal.avaj.domain.model.aircraft;
+package school42.urduliz.dugonzal.avaj.infrastructure.contracts;
 
 import school42.urduliz.dugonzal.avaj.domain.model.weather.WeatherTower;
 
